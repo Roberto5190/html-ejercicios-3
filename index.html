@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3 HTML</title>
 </head>
+
 <body>
     <header>
         <h1>Bienvenidos a Mi Página Web</h1>
@@ -24,6 +26,95 @@
             </ol>
             <a href="https://www.ejemplo.com" target="_blank">Ver más servicios</a>
         </section>
+
+        <form action="#" method="post">
+            <!-- Info Personal -->
+            <fieldset>
+                <legend>Información personal</legend>
+                <label>
+                    Nombre:
+                    <input type="text" name="nombre" required>
+                </label>
+                <label>
+                    Apellido:
+                    <input type="text" name="apellido" required>
+                </label>
+                <label>
+                    Fecha de nacimiento:
+                    <input type="date" name="fecha_nacimiento" required>
+                </label>
+                <label>
+                    Género:
+                    <label>
+                        Masculino
+                        <input type="checkbox" name="genero" value="masculino">
+                    </label>
+                    <label>
+                        Femenino
+                        <input type="checkbox" name="genero" value="Femenino">
+                    </label>
+                    <label>
+                        Otro
+                        <input type="checkbox" name="genero" value="Otro">
+                    </label>
+
+                </label>
+            </fieldset>
+
+            <!-- Info de contacto -->
+            <fieldset>
+                <legend>Información de Contacto</legend>
+                <label>
+                    Correo electrónico:
+                    <input type="email" name="correo" required>
+                </label>
+                <label>
+                    Teléfono:
+                    <input type="tel" name="telefono" required>
+                </label>
+                <label>
+                    Dirección:
+                    <textarea name="direccion"></textarea>
+                </label>
+            </fieldset>
+
+            <!-- Info de cuenta -->
+            <fieldset>
+                <legend>Información de la cuenta</legend>
+                <label>
+                    Usuario:
+                    <input type="text" name="usuario" required>
+                </label>
+                <label>
+                    Contraseña:
+                    <input type="password" name="contrasena" required>
+                </label>
+                <label>
+                    Confirmar contraseña:
+                    <input type="password" name="confirmar_contrasena" required>
+                </label>
+            </fieldset>
+            <!-- Preferencias -->
+            <fieldset>
+                <legend>Preferencias</legend>
+                <label>
+                    Color favorito:
+                    <select name="fav_color">
+                        <option value="rojo">Rojo</option>
+                        <option value="azul">Azul</option>
+                        <option value="verde">Verde</option>
+                        <option value="amarillo">Amarillo</option>
+                </label>
+                <label>
+                    <input type="checkbox" name="terminos" required>
+                    Acepto los términos y condiciones
+                </label>
+            </fieldset>
+
+            <!-- Botón enviar -->
+            <button type="submit">Enviar</button>
+        </form>
+        
     </main>
 
     <footer>
@@ -32,4 +123,5 @@
         <p>&copy HTMLServices Todos los derechos reservados</p>
     </footer>
 </body>
+
 </html>

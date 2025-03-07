@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <title>Ejercicio 3 HTML</title>
 </head>
 
@@ -13,109 +18,116 @@
         <p>Esta es una página de ejemplo para el ejercicio</p>
     </header>
 
-    <main>
-        <h2>Acerca de Nosotros</h2>
-        <p>Somos una empresa dedicada a ofrecer soluciones web</p>
+    <div class="container">
 
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <ol style="list-style: none;">
-                <li><strong>A.</strong> Consultoría estratégica para mejorar el rendimiento empresarial. </li>
-                <li><strong>B.</strong> Desarrollo de soluciones tecnológicas a medida para empresas.</li>
-                <li><strong>C.</strong> Capacitación y formación profesional en habilidades digitales.</li>
-            </ol>
-            <a href="https://www.ejemplo.com" target="_blank">Ver más servicios</a>
-        </section>
 
-        <form action="#" method="post">
-            <!-- Info Personal -->
-            <fieldset>
-                <legend>Información personal</legend>
-                <label>
-                    Nombre:
-                    <input type="text" name="nombre" required>
-                </label>
-                <label>
-                    Apellido:
-                    <input type="text" name="apellido" required>
-                </label>
-                <label>
-                    Fecha de nacimiento:
-                    <input type="date" name="fecha_nacimiento" required>
-                </label>
-                <label>
-                    Género:
-                    <label>
-                        <input type="checkbox" name="genero" value="masculino">
-                        Masculino
-                    </label>
-                    <label>
-                        <input type="checkbox" name="genero" value="Femenino">
-                        Femenino
-                    </label>
-                    <label>
-                        <input type="checkbox" name="genero" value="Otro">
-                        Otro
-                    </label>
 
-                </label>
-            </fieldset>
+        <main>
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos una empresa dedicada a ofrecer soluciones web</p>
 
-            <!-- Info de contacto -->
-            <fieldset>
-                <legend>Información de Contacto</legend>
-                <label>
-                    Correo electrónico:
-                    <input type="email" name="correo" required>
-                </label>
-                <label>
-                    Teléfono:
-                    <input type="tel" name="telefono" required>
-                </label>
-                <label>
-                    Dirección:
-                    <textarea name="direccion"></textarea>
-                </label>
-            </fieldset>
+            <section class="servicios_section">
+                <h2>Nuestros Servicios</h2>
+                <ol style="list-style: none;">
+                    <li><strong>A.</strong> Consultoría estratégica para mejorar el rendimiento empresarial. </li>
+                    <li><strong>B.</strong> Desarrollo de soluciones tecnológicas a medida para empresas.</li>
+                    <li><strong>C.</strong> Capacitación y formación profesional en habilidades digitales.</li>
+                </ol>
+                <a href="https://www.ejemplo.com" target="_blank">Ver más servicios</a>
+            </section>
+            <section class="form_container">
+                <form action="#" method="post" id="register_form">
+                    <!-- Info Personal -->
+                    <fieldset id="personal_info">
+                        <legend>Información personal</legend>
+                        <label>
+                            Nombre:
+                            <input type="text" name="nombre" required>
+                        </label>
+                        <label>
+                            Apellido:
+                            <input type="text" name="apellido" required>
+                        </label>
+                        <label>
+                            Fecha de nacimiento:
+                            <input type="date" name="fecha_nacimiento" required>
+                        </label>
+                        <label>
+                            Género:
+                            <label>
+                                <input type="radio" name="genero" value="masculino">
+                                Masculino
+                            </label>
+                            <label>
+                                <input type="radio" name="genero" value="Femenino">
+                                Femenino
+                            </label>
+                            <label>
+                                <input type="radio" name="genero" value="Otro">
+                                Otro
+                            </label>
+    
+                        </label>
+                    </fieldset>
+    
+                    <!-- Info de contacto -->
+                    <fieldset id="contact_info">
+                        <legend>Información de Contacto</legend>
+                        <label>
+                            Correo electrónico:
+                            <input type="email" name="correo" required>
+                        </label>
+                        <label>
+                            Teléfono:
+                            <input type="tel" name="telefono" required>
+                        </label>
+                        <label>
+                            Dirección:
+                            <textarea name="direccion"></textarea>
+                        </label>
+                    </fieldset>
+    
+                    <!-- Info de cuenta -->
+                    <fieldset id="account_info">
+                        <legend>Información de la cuenta</legend>
+                        <label>
+                            Usuario:
+                            <input type="text" name="usuario" required>
+                        </label>
+                        <label>
+                            Contraseña:
+                            <input type="password" name="contrasena" required>
+                        </label>
+                        <label>
+                            Confirmar contraseña:
+                            <input type="password" name="confirmar_contrasena" required>
+                        </label>
+                    </fieldset>
+                    <!-- Preferencias -->
+                    <fieldset class="preferences">
+                        <legend>Preferencias</legend>
+                        <label>
+                            Color favorito:
+                            <select name="fav_color">
+                                <option value="rojo">Rojo</option>
+                                <option value="azul">Azul</option>
+                                <option value="verde">Verde</option>
+                                <option value="amarillo">Amarillo</option>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="terminos" required>
+                            Acepto los términos y condiciones
+                        </label>
+                    </fieldset>
+    
+                    <!-- Botón enviar -->
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+            
 
-            <!-- Info de cuenta -->
-            <fieldset>
-                <legend>Información de la cuenta</legend>
-                <label>
-                    Usuario:
-                    <input type="text" name="usuario" required>
-                </label>
-                <label>
-                    Contraseña:
-                    <input type="password" name="contrasena" required>
-                </label>
-                <label>
-                    Confirmar contraseña:
-                    <input type="password" name="confirmar_contrasena" required>
-                </label>
-            </fieldset>
-            <!-- Preferencias -->
-            <fieldset>
-                <legend>Preferencias</legend>
-                <label>
-                    Color favorito:
-                    <select name="fav_color">
-                        <option value="rojo">Rojo</option>
-                        <option value="azul">Azul</option>
-                        <option value="verde">Verde</option>
-                        <option value="amarillo">Amarillo</option>
-                </label>
-                <label>
-                    <input type="checkbox" name="terminos" required>
-                    Acepto los términos y condiciones
-                </label>
-            </fieldset>
-
-            <!-- Botón enviar -->
-            <button type="submit">Enviar</button>
-        </form>
-        
-    </main>
+        </main>
+    </div>
 
     <footer>
         <a href="mailto:info@miempresa.com">Enviar correo electrónico</a>

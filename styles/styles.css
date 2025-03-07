@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid salmon; */
+}
+
+
+html, body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .75rem 8rem;
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    margin: 0rem 4rem;
+}
+.servicios_section{
+    margin: 2rem 0;
+}
+
+fieldset{
+    border-radius: 16px;
+    
+    display: flex;
+    flex-direction: column;
+}
+#register_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 470px;
+    margin-bottom: 2rem;
+}
+
+#personal_info, #contact_info, #account_info, .preferences{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 8rem;
+    background-color: #343a40;
+    color: #f8f9fa;
+    bottom: 0;
+}
+
+a {
+    color: rgb(75, 161, 196);
+}
